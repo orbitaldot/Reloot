@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_switch_characters()
 {
 	with(obj_item)
@@ -15,5 +13,6 @@ function scr_switch_characters()
 	}
 	
 	global.hp = global.hp_max;
+	global.draw_hp = false;
 
 }

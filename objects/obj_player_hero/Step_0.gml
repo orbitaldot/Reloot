@@ -10,7 +10,7 @@ if !place_meeting(x + _dx, y, obj_coll)
 	
 var _floor = instance_place(x, y + vel_y, obj_coll);
 
-var _onground = 0;
+on_ground = 0;
 
 if _floor != noone  {
 	if _floor.y >= y
@@ -23,7 +23,7 @@ if _floor != noone  {
 	vel_y = 0;
 	
 	if abs(_floor.y - y) < .5 {
-		_onground = 1
+		on_ground = 1
 		jump_time = 0;
 	}
 } else {
@@ -37,7 +37,7 @@ if vel_y < gravity_force
 }
 
 // jump
-if keyboard_check(vk_up) and _onground and global.player_control
+if keyboard_check(vk_up) and on_ground and global.player_control
 {
 	audio_play_sound(sfx_jump, 0, 0);
 	vel_y = -3;	
@@ -86,7 +86,7 @@ else if player_character == 1
 	
 }
 
-if xprevious != x and _onground {
+if xprevious != x and on_ground {
 	if image_speed = 0
 		image_index = 1
 	image_speed = 1
@@ -95,9 +95,17 @@ if xprevious != x and _onground {
 	image_index = 0;
 }
 
-if !_onground
+if !on_ground
 	image_index = 1;
 
 life++;
 
 _dx = 0;
+
+if keyboard_check_pressed(ord("B"))
+{
+	with(obj_enemy)
+		die();
+	x = 2720;
+	y = 270;
+}

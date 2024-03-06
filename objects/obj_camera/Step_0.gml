@@ -7,9 +7,10 @@ if target != noone {
 	
 	if abs(diff_x) > target_follow_window_width
 		catchup_x = true;
-		
 	
-	if (target.y > _cy + 32) or (target.y < _cy - 64)
+	var _y_diff = target.y - _cy
+	
+	if (_y_diff > 32) or (_y_diff < -72) or (_y_diff < -32 and instance_exists(target) and target.on_ground)
 		catchup_y = true;
 		
 	if catchup_x {

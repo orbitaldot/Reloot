@@ -18,3 +18,5 @@ life = 0;
 jump_time = 0;
 
 invinc = 60;
+
+on_ground = false;

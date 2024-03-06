@@ -1,5 +1,9 @@
 draw_set_color(c_black);
-draw_rectangle(obj_camera.x, obj_camera.y, obj_camera.x + global.window_size[0], obj_camera.y + 16, 0);
+
+var _cx = ceil(obj_camera.x);
+var _cy = ceil(obj_camera.y);
+
+draw_rectangle(_cx, _cy - 2, _cx + global.window_size[0], _cy + 16, 0);
 
 draw_set_halign(fa_right);
 draw_set_color(c_white);
@@ -64,17 +68,16 @@ else if obj_player.player_character == 2
 }
 
 
-draw_text(obj_camera.x + global.window_size[0] - 4, obj_camera.y + 4, _info_string);
+draw_text(_cx + global.window_size[0] - 4, _cy + 4, _info_string);
 draw_set_halign(fa_left);
 
-for(var i = 0; i < global.hp_max; i++) {
-	draw_sprite(spr_heart, i >= global.hp, 8 + obj_camera.x + i*16, obj_camera.y);
-}
+if global.draw_hp
+	for(var i = 0; i < global.hp_max; i++) {
+		draw_sprite(spr_heart, i >= global.hp, 8 + _cx + i*16, _cy);
+	}
 
 draw_set_valign(fa_bottom);
 
-var _cx = obj_camera.x;
-var _cy = obj_camera.y;
 var _ww = global.window_size[0];	// woodrow wilson? willy wonka? ... window width?
 var _wh = global.window_size[1];
 

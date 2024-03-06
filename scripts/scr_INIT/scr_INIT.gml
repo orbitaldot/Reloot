@@ -19,6 +19,8 @@ function scr_INIT() {
 	global.hp = 3;
 	global.hp_max = 3;
 	
+	global.draw_hp = true;
+	
 	global.potions = 0;
 	global.bombs = 0;
 	

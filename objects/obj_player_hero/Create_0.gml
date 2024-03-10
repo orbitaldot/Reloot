@@ -1,3 +1,12 @@
+/*
+	"obj_player" exists, and so does "obj_player_hero" (you are here!),
+	the reason being that Molt would have been a separate child object
+	of obj_player.
+	
+	But then it turned out to be easier to include all of Molt's logic
+	with that of the Hero.
+*/
+
 event_inherited();
 
 gravity_force = 4;

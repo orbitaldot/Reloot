@@ -36,14 +36,16 @@ if !instance_exists(obj_whitefade)
 	
 	var _y = 190;
 	
+	var _txt = "Press [Z] or [Y] to start.";
+	
 	if global.tick mod 60 <= 30 {
-		draw_text(global.window_size[0]/2 - 1, _y, "Press [Z] or [Y] to start.");
-		draw_text(global.window_size[0]/2 + 1, _y, "Press [Z] or [Y] to start.");
-		draw_text(global.window_size[0]/2, _y - 1, "Press [Z] or [Y] to start.");
-		draw_text(global.window_size[0]/2, _y + 1, "Press [Z] or [Y] to start.");
+		draw_text(global.window_size[0]/2 - 1, _y, _txt);
+		draw_text(global.window_size[0]/2 + 1, _y, _txt);
+		draw_text(global.window_size[0]/2, _y - 1, _txt);
+		draw_text(global.window_size[0]/2, _y + 1, _txt);
 		
 		draw_set_color(c_yellow);
-		draw_text(global.window_size[0]/2, _y, "Press [Z] or [Y] to start.");
+		draw_text(global.window_size[0]/2, _y, _txt);
 		
 	}
 	

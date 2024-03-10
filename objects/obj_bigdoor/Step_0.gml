@@ -1,9 +1,15 @@
+image_speed = 0;
+
 if place_meeting(x, y, obj_player) {
+	if player_contact_timer == 0
+		image_index = 1;
+	image_speed = 1;
 	player_contact_timer++;	
 } else {
 	player_contact_timer = 0;	
 	flash = noone;
 	wait_for_reentry = false;
+	image_index = 0;
 }
 
 if open and player_contact_timer >= .75*60 and !wait_for_reentry {

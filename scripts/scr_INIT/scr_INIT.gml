@@ -35,6 +35,8 @@ function scr_INIT() {
 	
 	global.beat = false;
 	
+	display_set_gui_size(global.window_size[0], global.window_size[1])
+	
 	// Go to starting room
 	var _start_room = room_menu;
 	

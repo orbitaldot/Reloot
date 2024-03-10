@@ -3,7 +3,7 @@ if target != noone {
 	var _cy = y + global.window_size[1]/2 + cam_offset_y
 	
 	diff_x = floor(target.x) - _cx;
-	diff_y = floor(target.y) - _cy;
+	diff_y = floor(target.y + 64) - _cy;
 	
 	if abs(diff_x) > target_follow_window_width
 		catchup_x = true;

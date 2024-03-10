@@ -57,18 +57,21 @@ else if obj_player.player_character == 1
 		);
 	}	
 }
+
 else if obj_player.player_character == 2
 {
 	if global.tick mod 60 > 30
 		_info_string = global.text[? "hud_stage_clear"];
+
 }else if obj_player.player_character == 3
 {
 	if global.tick mod 60 > 30
 		_info_string = global.text[? "hud_chests_restocked"];
+
 }else if obj_player.player_character == 4
 {
 	if global.tick mod 60 > 30
-		_info_string = global.text[? "hud_chests_already_restocked"];
+		_info_string = global.text[? "hud_chests_already_stocked"];
 }
 
 
@@ -135,4 +138,3 @@ new_item_tick_potions -= new_item_tick_potions > 0;
 
 old_bombs = global.bombs;
 old_potions = global.potions;
-

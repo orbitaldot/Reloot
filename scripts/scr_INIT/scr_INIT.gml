@@ -1,13 +1,13 @@
 function scr_INIT() {
-	// the main script
-	// the code is hot garbage...
-	// but hey, at least the game works...
 	
 	// Initialize window stuff
 	global.window_size = [room_width, room_height];
 	global.window_scale = 3;
 	
-	window_set_size(global.window_size[0]*global.window_scale, global.window_size[1]*global.window_scale);
+	window_set_size(
+		global.window_size[0]*global.window_scale,
+		global.window_size[1]*global.window_scale
+	);
 	
 	global.player_control = true;
 	
@@ -39,7 +39,6 @@ function scr_INIT() {
 	
 	display_set_gui_size(global.window_size[0], global.window_size[1])
 	
-	// Go to starting room
 	var _start_room = room_menu;
 	
 	room_goto(_start_room);

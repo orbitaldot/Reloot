@@ -1,14 +1,16 @@
 if target != noone {
+	var _d = 16;
+	var _targ_y = target.y - _d;
+	
 	var _cx = x + global.window_size[0]/2 + cam_offset_x
 	var _cy = y + global.window_size[1]/2 + cam_offset_y
 	
 	diff_x = floor(target.x) - _cx;
-	diff_y = floor(target.y + 64) - _cy;
 	
 	if abs(diff_x) > target_follow_window_width
 		catchup_x = true;
 	
-	var _y_diff = target.y - _cy
+	var _y_diff = _targ_y - _cy
 	
 	if (_y_diff > 32) or (_y_diff < -72) or (_y_diff < -32 and instance_exists(target) and target.on_ground)
 		catchup_y = true;
@@ -26,12 +28,12 @@ if target != noone {
 	}
 	
 	if catchup_y {
-		y += sign(target.y - _cy) * max(abs(target.y - target.yprevious), 4) ;
+		y += sign(_targ_y - _cy) * max(abs(_targ_y - (target.yprevious - _d)), 4) ;
 		
-		if abs(target.y - _cy) <= 2
-			y = target.y - global.window_size[1]/2 + cam_offset_y;
+		if abs(_targ_y - _cy) <= 2
+			y = _targ_y - global.window_size[1]/2 + cam_offset_y;
 		
-		if abs(target.y - _cy) == 0 {
+		if abs(_targ_y - _cy) == 0 {
 			catchup_y = false;
 		}
 	}

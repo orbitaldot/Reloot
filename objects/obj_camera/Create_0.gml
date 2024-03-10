@@ -9,7 +9,7 @@ if instance_exists(obj_player)
 cam_offset_x = 0;
 cam_offset_y = 0;
 
-target_follow_window_width = 40;
+target_follow_window_width = 20;
 target_follow_window_height = 60;
 
 catchup_x = false;

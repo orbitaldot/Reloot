@@ -35,6 +35,8 @@ function scr_INIT() {
 	
 	global.beat = false;
 	
+	global.text = scr_text_init();
+	
 	display_set_gui_size(global.window_size[0], global.window_size[1])
 	
 	// Go to starting room

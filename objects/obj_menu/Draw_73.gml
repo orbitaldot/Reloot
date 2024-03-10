@@ -36,7 +36,7 @@ if !instance_exists(obj_whitefade)
 	
 	var _y = 190;
 	
-	var _txt = "Press [Z] or [Y] to start.";
+	var _txt = global.text[? "menu_play"];
 	
 	if global.tick mod 60 <= 30 {
 		draw_text(global.window_size[0]/2 - 1, _y, _txt);
@@ -53,7 +53,7 @@ if !instance_exists(obj_whitefade)
 }
 
 draw_set_color(c_white);
-draw_text(126, 4, "A game by orbitaldot\nfor Ludum Dare 53");
+draw_text(126, 4, global.text[? "menu_tag"]);
 
 draw_set_halign(fa_left);
 draw_set_colour(c_white);

@@ -17,54 +17,58 @@ if !instance_exists(obj_player)
 if obj_player.player_character == 0 
 {	
 	if obj_player.x >= room_width - 16 and global.enemy_count >= 1 {
-		_info_string = "Slay all monsters first!";	
+		_info_string = global.text[? "hud_slay_first"];	
 		obj_player.x = room_width - 16
 	} else 
 	{
-		if global.enemy_count > 1
-			_info_string = string(global.enemy_count) + " monsters left!";
-		else if global.enemy_count == 1
-			_info_string = string(global.enemy_count) + " monster left!!";
+		if global.enemy_count >= 1
+			_info_string = scr_text_substitute(
+				global.text[? "hud_monsters_left"], 
+				global.enemy_count,
+				global.enemy_count == 1 ? "" : "s"
+			);
 		
 		else 
 		{
-			_info_string = "EXIT -> ";
+			_info_string = global.text[? "hud_exit_0"];
 			if global.tick mod 60 > 30
-				_info_string = "EXIT  ->";
+				_info_string = global.text[? "hud_exit_1"];
 		}
 	}
 }
 else if obj_player.player_character == 1
 {
 	if obj_player.x >= room_width - 16 {
-		_info_string = "This exit is not for you!";	
+		_info_string = global.text[? "hud_exit_not_for_you"];
 		obj_player.x = room_width - 16
 	} 
 	else if (global.chests_opened == 0)
 	{	
-			_info_string = "<-  CARAVAN";
+			_info_string = global.text[? "hud_caravan_0"];
 			if global.tick mod 60 > 30
-				_info_string = " <- CARAVAN";	
+				_info_string = global.text[? "hud_caravan_1"];
 	}
-	else if global.chests_opened > 1
+	else if global.chests_opened >= 1
 	{
-		_info_string = string(global.chests_opened) + " chests to restock!";
-	} else {
-		_info_string = string(global.chests_opened) + " chest to restock!";
+		_info_string = scr_text_substitute(
+			global.text[? "hud_chests_to_restock"], 
+			global.chests_opened,
+			global.chests_opened == 1 ? "" : "s"
+		);
 	}	
 }
 else if obj_player.player_character == 2
 {
 	if global.tick mod 60 > 30
-		_info_string = "STAGE CLEAR!";
+		_info_string = global.text[? "hud_stage_clear"];
 }else if obj_player.player_character == 3
 {
 	if global.tick mod 60 > 30
-		_info_string = "CHESTS RESTOCKED!";
+		_info_string = global.text[? "hud_chests_restocked"];
 }else if obj_player.player_character == 4
 {
 	if global.tick mod 60 > 30
-		_info_string = "CHESTS... ALREADY STOCKED!";
+		_info_string = global.text[? "hud_chests_already_restocked"];
 }
 
 

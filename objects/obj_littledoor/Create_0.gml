@@ -1,6 +1,3 @@
-player_contact_timer = 0;
-
-open = false;
-
-flash = noone;
-wait_for_reentry = false;
+event_inherited();
+destination = obj_bigdoor;
+sprite_open = spr_littledoor_open;

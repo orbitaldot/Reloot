@@ -18,12 +18,12 @@ if open and player_contact_timer >= .75*60 and !wait_for_reentry {
 		audio_play_sound(sfx_mario_warp, 0, 0);
 	}
 	
-	if flash.state == 1
+	if flash.state == 1 and destination != noone
 	{
 		audio_play_sound(sfx_mario_warp, 0, 0);
 		
-		obj_player.x = obj_littledoor.x;
-		obj_player.y = obj_littledoor.y;
+		obj_player.x = destination.x;
+		obj_player.y = destination.y;
 		
 		obj_littledoor.wait_for_reentry = true;
 	
@@ -33,4 +33,4 @@ if open and player_contact_timer >= .75*60 and !wait_for_reentry {
 }
 
 if open
-	sprite_index = spr_bigdoor_open;
+	sprite_index = sprite_open;

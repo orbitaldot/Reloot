@@ -126,6 +126,7 @@
     {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"spr_windarea_up","path":"sprites/spr_windarea_up/spr_windarea_up.yy",},},
+    {"id":{"name":"obj_warpdoor","path":"objects/obj_warpdoor/obj_warpdoor.yy",},},
     {"id":{"name":"mus_level","path":"sounds/mus_level/mus_level.yy",},},
     {"id":{"name":"mus_ending","path":"sounds/mus_ending/mus_ending.yy",},},
     {"id":{"name":"spr_bigdoor_shut","path":"sprites/spr_bigdoor_shut/spr_bigdoor_shut.yy",},},

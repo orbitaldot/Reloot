@@ -46,6 +46,7 @@
     {"id":{"name":"sfx_damage","path":"sounds/sfx_damage/sfx_damage.yy",},},
     {"id":{"name":"spr_player_carrier_eyes","path":"sprites/spr_player_carrier_eyes/spr_player_carrier_eyes.yy",},},
     {"id":{"name":"room_ending","path":"rooms/room_ending/room_ending.yy",},},
+    {"id":{"name":"sfx_wind_woosh","path":"sounds/sfx_wind_woosh/sfx_wind_woosh.yy",},},
     {"id":{"name":"scr_freeze","path":"scripts/scr_freeze/scr_freeze.yy",},},
     {"id":{"name":"scr_onscreen","path":"scripts/scr_onscreen/scr_onscreen.yy",},},
     {"id":{"name":"spr_gradient","path":"sprites/spr_gradient/spr_gradient.yy",},},

@@ -32,5 +32,5 @@
     "path": "sprites/spr_level_jump/spr_level_jump.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

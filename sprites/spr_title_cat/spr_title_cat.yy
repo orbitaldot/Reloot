@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "spr_title_cat",
   "bbox_bottom": 215,
-  "bbox_left": 26,
-  "bbox_right": 166,
+  "bbox_left": 8,
+  "bbox_right": 163,
   "bbox_top": 56,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b86150f1-f0ed-43f7-ac82-f054e880365b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a93edce6-f81e-41dd-8b2d-0ff3078d15ef",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 216,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0f9809d3-d4f7-45f3-b7d5-be975845747a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ce10e9c9-2163-499d-8898-1eae1c6ceacd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b86150f1-f0ed-43f7-ac82-f054e880365b","path":"sprites/spr_title_cat/spr_title_cat.yy",},},},"Disabled":false,"id":"86942e87-2dfa-4461-a2b2-9d7ca29066c7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a93edce6-f81e-41dd-8b2d-0ff3078d15ef","path":"sprites/spr_title_cat/spr_title_cat.yy",},},},"Disabled":false,"id":"4bb81cb4-12e3-423d-9b4d-f47471f940d1","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

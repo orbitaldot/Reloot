@@ -9,6 +9,9 @@ var m = min(life - t, 0);
 draw_sprite(spr_title_cat, 0, -m, 0)
 draw_sprite(spr_title_knight, 0, m, 0)
 
+if (life >= 70 && !instance_exists(obj_sword_sparkle))
+	instance_create_depth(0,0,-1000,obj_sword_sparkle);
+
 gpu_set_fog(1, c_black, 0, 0);
 draw_set_alpha(round(8*(1 - (life - t)/60))/8);
 draw_sprite(spr_title_cat, 0, -m, 0)

@@ -4,7 +4,7 @@ hp = 1;
 
 hitbox = noone;
 
-item_within = choose(1,0,0);
+item_within = choose(1,1,0,0);
 restocked = false;
 open = false;
 

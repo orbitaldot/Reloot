@@ -5,3 +5,8 @@ if image_xscale <= 0 and image_yscale <= 0
 	instance_destroy(id);
 	
 image_angle += 10;
+
+if place_meeting(x, y + vspeed, obj_coll)
+{
+	vspeed = 0;
+}
